@@ -12,7 +12,7 @@ def create_recept_book(local_path: str):
                 cook_book[dish_name].append({})
                 ingredient = f.readline().rstrip().split(" | ")
                 cook_book[dish_name][counter]["ingredient_name"] = ingredient[0]
-                cook_book[dish_name][counter]["quantity"] = ingredient[1]
+                cook_book[dish_name][counter]["quantity"] = int(ingredient[1])
                 cook_book[dish_name][counter]["measure"] = ingredient[2]
                 counter += 1
             f.readline()
